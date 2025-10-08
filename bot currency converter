@@ -1,0 +1,56 @@
+from currency_converter import CurrencyConverter
+from datetime import date
+list=["1.indian rupees",
+      "2.USD ",
+      "3.EURO ",
+      "3.rubel",
+      "4.japanese YEN",
+      "5.australian dollar",
+      "6.cannadian dollar",
+      "7.korean won",
+      "8.UK pound",
+      "9.china Renminbi",
+      "10.mexican peso",
+      ]
+
+curr=["indian rupees",
+      "USD ",
+      "EURO ",
+      "rubel",
+      "japanese YEN",
+      "australian dollar",
+      "cannadian dollar",
+      "korean won",
+      "UK pound",
+      "china Renminbi",
+      "mexican peso",
+      ]
+
+list_1=['INR',
+        'USD',
+        'EUR',
+        'RUB',
+        'JPY',
+        'CAD',
+        'KRW',
+        'GBP',
+        'CNY',
+        'MXN'
+        ]
+        
+        
+        
+for ele in list:
+    print(ele)
+print("select your currency, please select the number")
+currency_1=int(input())
+print('select the currency you want to convert into,please select the number')
+currency_2=int(input())
+print ("enter the amount")
+amount=float(input())
+c=CurrencyConverter()
+x=c.convert(amount,str(list_1[currency_1-1]),str(list_1[currency_2-1]))
+x=round(x,3)
+print("okay you want to convert from "+str(curr[currency_1-1])+"  to  "+ str(curr[currency_2-1]))
+print("so your required amout is")   
+print(x)
